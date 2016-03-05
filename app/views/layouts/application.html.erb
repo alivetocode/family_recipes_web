@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>FamilyRecipesWeb</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+	  <title>FamilyRecipes</title>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+		<header>
+				<% if user_signed_in? %>
+				<%= link_to "HOME", root_path %>
+				<%= link_to "RECIPES" %>
+				<%= link_to "USERS" %>
+				<%= link_to "MORE" %>
+				<%= link_to "LOGOUT", destroy_user_session_path, method: :delete %>
+				
+				<% else %>
+				<%= link_to "SIGN IN", new_user_session_path %>
+				<%= link_to "SIGN UP", new_user_registration_path %>
+				<% end %>
+		</header>
+		<%= yield %>
 
-<%= yield %>
-
-</body>
+	</body>
 </html>
