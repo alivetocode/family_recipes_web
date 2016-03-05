@@ -1,12 +1,23 @@
 Rails.application.routes.draw do
-  get 'home/index'
+
+  resources :recipes
+
+  # get 'recipes/index'
+
+  # get 'recipes/show'
+
+  # get 'recipes/new'
+
+  # get 'recipes/edit'
+
+  # get 'home/index'
+  root 'home#index'
 
   devise_for :users, :controllers => { registrations: 'registrations' }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  root 'home#index'
+  # You can have the root of your site routed with "root
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

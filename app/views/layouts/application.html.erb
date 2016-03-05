@@ -8,9 +8,10 @@
 	</head>
 	<body>
 		<header>
+				<h1> FOOD + FAMILY </h1>
 				<% if user_signed_in? %>
 				<%= link_to "HOME", root_path %>
-				<%= link_to "RECIPES" %>
+				<%= link_to "RECIPES", recipes_path %>
 				<%= link_to "USERS" %>
 				<%= link_to "MORE" %>
 				<%= link_to "LOGOUT", destroy_user_session_path, method: :delete %>
@@ -20,7 +21,9 @@
 				<%= link_to "SIGN UP", new_user_registration_path %>
 				<% end %>
 		</header>
-		
+
+	
+
 		<%= yield %>
 
 	</body>
