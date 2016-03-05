@@ -27,7 +27,7 @@
 
     <div class="field">
     <%= f.label :category%><br>
-    <%= f.text_field :category%>
+    <%= f.collection_select :category_id, Category.all, :id, :name, {prompt: "Choose a category"}%>
   </div>
 
    <div class="field">
