@@ -17,6 +17,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'cocoon', '~> 1.2', '>= 1.2.8'
 gem 'devise', '~> 3.5', '>= 3.5.6'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 
 
 group :production do
